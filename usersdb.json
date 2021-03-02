@@ -1,0 +1,4 @@
+{"_id":{"$oid":"5fd50318bf25662fe786d46a"},"Username":"morgank","Password":"movielover","Email":"movielover@gmail.com","Birth_Date":"08-31-1956","FavoriteMovies":[{"$oid":"5fd4f366bf25662fe786d461"},{"$oid":"5fd4fad3bf25662fe786d462"},{"$oid":"5fd4fe51bf25662fe786d464"}]}
+{"_id":{"$oid":"5fd503bcbf25662fe786d46c"},"Username":"movietodd","Password":"burbank1","Email":"radtodd@sbcglobal.net","Birth_Date":"09-03-2000","FavoriteMovies":[{"$oid":"5fd4fefebf25662fe706d465"},{"$oid":"5fce0103bf25662fe786d45f"},{"$oid":"5fd4f384bf25662fe786d460"}]}
+{"_id":{"$oid":"5fd50412bf25662fe786d46d"},"Username":"hifive","Password":"dixie13","Email":"dixie13@gmail.com","Birth_Date":"05-02-2001","FavoriteMovies":[{"$oid":"5fd4f366bf25662fe786d461"},{"$oid":"5fd4f384bf25662fe786d460"},{"$oid":"5fd50198bf25662fe786d468"}]}
+{"_id":{"$oid":"5ff92b01921e5502f7b3d4e5"},"FavoriteMovies":[],"Username":"dixie95","Password":"chloedog","Email":"dixie@gmail.com","__v":0}

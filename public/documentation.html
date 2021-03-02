@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Documentation</title>
+    </head>
+    <body>
+        <h1>Movie Database</h1>
+        <p>This web application will provide users with access to information about movies, directors, and genres.<br>
+            Users will be able to sign up, update their personal information, and create a list of their favorite movies.
+        </p>
+        <table border="1">
+            <tr>
+                <th>Request</th>
+                <th>URL</th>
+                <th>HTTP Method</th>
+                <th>Response Body Data Format</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td>Get a list of all movies</td>
+                <td>/movies</td>
+                <td>GET</td>
+                <td>A json object holding all the movie data</td>
+                <td>Genre: Name: Thriller Film, also known as suspense film or suspense thriller, is a broad genre that involves excitement and suspence in the audience.<br>
+                Director: Name: "Jonathan Demme" Bio: Robert Jonathan Demme was an American director, producer and screenwriter. Birth: "1944" Death: "2017"<br>
+            _id: "5fce8108bf25662fe786d45f" Title: "Silence of the Lambs" Description: "A young FBI cadet must receive the help of an incarcerated cannibal killer." ImagePath: "silenceofthelambs.png" Featured: true</td>
+            </tr>
+            <tr>
+                <td>Get a list of one specific title</td>
+                <td>/movies/title</td>
+                <td>GET</td>
+                <td>A Json object holding information about a single movie</td>
+                <td>Genre: Name: Thriller Film, also known as suspense film or suspense thriller, is a broad genre that involves excitement and suspence in the audience.<br>
+                    Director: Name: "Jonathan Demme" Bio: Robert Jonathan Demme was an American director, producer and screenwriter. Birth: "1944" Death: "2017"<br>
+                _id: "5fce8108bf25662fe786d45f" Title: "Silence of the Lambs" Description: "A young FBI cadet must receive the help of an incarcerated cannibal killer." ImagePath: "silenceofthelambs.png" Featured: true</td>
+            </tr>
+            <tr>
+                <td>Get data about a genre of movie by title</td>
+                <td>/movies/genres/:title</td>
+                <td>GET</td>
+                <td>A json object returning information about a genre by title</td>
+                <td>"Name": "Comedy",
+                    "Description": "Comedy is a genre of film in which the main emphasis is on humor. These films are designed to make the audience laugh through amusement and most often work by exaggerating characteristics for humorous effect."</td>
+            </tr>
+            <tr>
+                <td>Return data about a director by name</td>
+                <td>/movies/directors/:name</td>
+                <td>GET</td>
+                <td>A json object returning information about a director by name</td>
+                <td>  
+                "Director": {
+                    "Name": "Wes Ball",
+                    "Bio": "Wes Ball was born on October 28, 1980 in the USA. He is known for his work on Maze Runner: The Scorch Trials (2015), Maze Runner: The Death Cure (2018) and The Maze Runner (2014).",
+                    "Birth": "1980"
+                </td>
+            </tr>
+            <tr>
+                <td>Register a user</td>
+                <td>/users</td>
+                <td>POST</td>
+                <td>Text shows created username</td>
+                <td>FavoriteMovies[...]<br>
+                    Username: ManiacalMovieLover<br>
+                    Password: happymovie22<br>
+                    Email: montypython@aol.com<br>
+                    Birth_date: 09/25/1980</td>
+            </tr>
+            <tr>
+                <td>Allow users to update user information</td>
+                <td>/users/:username</td>
+                <td>PUT</td>
+                <td>Text showing changes to user information</td>
+                <td>FavoriteMovies[...]<br>
+                    Username: ManiacalMovieLover<br>
+                    Password: happymovie22<br>
+                    Email: (change) montypython@gmail.com<br>
+                    Birth_date: 09/25/1980</td>
+            </tr>
+            <tr>
+                <td>Allow users to add a movie to favorites</td>
+                <td>/users/username/movies/:title</td>
+                <td>PUT</td>
+                <td>A json object showing added movie to list</td>
+                <td>FavoriteMovies:["5fd4f384bf25662fe786d460"]<br>
+                    Username: ManiacalMovieLover<br>
+                    Password: happymovie22<br>
+                    Email: montypython@gmail.com<br>
+                    Birth_date: 09/25/1980</td>
+            </tr>
+            <tr>
+                <td>Allow users to delete a movie from favorites</td>
+                <td>/users/username/movies/:title</td>
+                <td>DELETE</td>
+                <td>Removes json object of movie from list</td>
+                <td>FavoriteMovies:[...]<br>
+                    Username: ManiacalMovieLover<br>
+                    Password: happymovie22<br>
+                    Email: (change) montypython@gmail.com<br>
+                    Birth_date: 09/25/1980</td>
+            </tr>
+            <tr>
+                <td>Allow users to deregister account</td>
+                <td>/users/:username</td>
+                <td>DELETE</td>
+                <td>Text showing account has been deregistered</td>
+                <td>"ManiacalMovieLover has been deleted"</td>
+            </tr>
+        </table>
+    </body>
+</html>
