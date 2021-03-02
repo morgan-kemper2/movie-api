@@ -213,6 +213,7 @@ app.delete(
 app.put(
   "/users/:Username",
   function (req, res) {
+    let hashedPassword = Users.hashPassword(req.body.Password);
     Users.findOneAndUpdate(
       { Username: req.params.Username },
       {
