@@ -41,8 +41,8 @@ require('./passport');
 
 let auth = require('./auth')(app);
 
-const cors = require('cors');
-app.use(cors());
+// const cors = require('cors');
+// app.use(cors());
 
 const { check, validationResult } = require('express-validator');
 
