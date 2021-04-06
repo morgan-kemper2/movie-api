@@ -43,7 +43,7 @@ let auth = require('./auth')(app);
 
 const cors = require('cors');
 // app.use(cors());
-let allowedOrigins = ["http://localhost:8080", "http://localhost:1234", "https://findamovieflix.herokuapp.com", "http://localhost:4200"];
+let allowedOrigins = ["http://localhost:8080", "http://localhost:1234", "https://findamovieflix.herokuapp.com", "http://localhost:4200","https://morgan-kemper2.github.io/myflix-angular-client2/welcome"];
 
 
 // app.use(cors()); //By default, this will allow all domains to make requests to the API. The commented code below restricts this to specific origins.
